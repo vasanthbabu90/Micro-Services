@@ -6,40 +6,35 @@ Framework: Spring
 
 Tool: STS
 
-## How to run
+##for Testing##
+https://spring.io/guides/gs/spring-boot/
 
-Run it on Spring Tool Suite (STS) is the easiest way to go
+##run in command 
+- java -jar namejar
 
-download and install STS
+@springbootannotation
+If specific packages are not defined, scanning will occur from the package of the class that declares this annotation.
 
-java -jar namejar
+@componentscan annotation will only scan the package we defined. - by default
+declare - @ComponentScan(basePackages = .. ) for other components to scan
 
-https://spring.io
+##*******Spring 3 supports JSR 330 and will do below things and it needed javax.inject dependency**
+@Inject instead of Spring’s @Autowired to inject a bean.
+@Named instead of Spring’s @Component to declare a bean.
 
-Open STS and go to
+##******************Controllers useful link
+http://www.baeldung.com/spring-requestmapping
+http://howtodoinjava.com/spring/spring-mvc/spring-mvc-requestmapping-annotation-examples/
+****************************
 
-> File -> Import -> General -> Existing Projects into work space -> [Select the directory and there it is :D ]
 
-before running it's better to fix the port in "run configuration", for example 8085 
 
-then open this link in the web browser
-
-> http://localhost:8085/hello?name=whatever
-
-there it is :)
-
-# More detail 
-
-Micro service and Hello World with JAVA Spring Framework
-
-http://www.slideshare.net/PankamolSrikaew/micro-service-56062328
-
-# Extended project with MongoDB
-
-Oh~ I'm so glad to present this one
-
-https://github.com/AimePGM/HelloWorldJavaMicroServiceWithMongoDB
-
-hope it help :)
-
-Thank you
+*******
+		/* sample type List<JSONObject> entities = new ArrayList<JSONObject>();
+		    for (Entity n : entityList) {
+		        JSONObject Entity = new JSONObject();
+		        entity.put("id", n.getId());
+		        entity.put("address", n.getAddress());
+		        entities.add(entity);
+		    }*/
+*****

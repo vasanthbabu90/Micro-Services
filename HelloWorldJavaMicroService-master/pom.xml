@@ -21,6 +21,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jersey</artifactId>
 		</dependency>
+		<dependency> <!-- store data structures as graphs rather then tables - optional -->
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-cypher-compiler-2.1</artifactId>
+			<version>2.1.5</version>
+		</dependency>
 	</dependencies>
 	
 	<build>
@@ -32,7 +37,7 @@
 		<configuration>
 			<mainClass>main.Application</mainClass>
 		</configuration>
-		<executions>
+		<!-- <executions>
 			<execution>
 				<goals>
 					<goal>repackage</goal>
@@ -41,7 +46,7 @@
 					<finalName>exec</finalName>
 				</configuration>
 			</execution>
-		</executions>
+		</executions> -->
 	</plugin>
 	</plugins>
 	</build>
